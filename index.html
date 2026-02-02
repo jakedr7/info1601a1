@@ -2,15 +2,114 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>INFO 1691 - Assignment 1</title>
     <style>
-
+        /* Student should implement these styles */
         
+        /* Table Styles - TODO */
+        table {
+            /* Add your styles here */
+        }
+        
+        /* Navigation Styles - TODO */
+        nav {
+            /* Add your styles here */
+        }
+        
+        /* Additional styles for demonstration */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        .instructions {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
-   <h1>My Site</h1>
+    <div class="instructions">
+        <h1>INFO 1601 - Assignment 1</h1>
+        <p><strong>Instructions:</strong> Complete the CSS styles below to pass all tests.</p>
+        <ul>
+            <li>Style the table with blue background and box shadow (10 marks)</li>
+            <li>Add proper table headers with bold text and center alignment (5 marks)</li>
+            <li>Add borders to table cells (8 marks)</li>
+            <li>Create horizontal navigation with flexbox layout (10 marks)</li>
+            <li>Style navigation links with no underline and hover effects (8 marks)</li>
+        </ul>
+        <p><strong>Test your work:</strong> Run <code>npm test</code> to validate your implementation.</p>
+    </div>
+
+    <!-- Table Section - Assignment 1 Part 1 -->
+    <section id="table-section">
+        <h2>Employee Data Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>John Smith</td>
+                    <td>Engineering</td>
+                    <td>$75,000</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Jane Johnson</td>
+                    <td>Marketing</td>
+                    <td>$65,000</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Bob Wilson</td>
+                    <td>Sales</td>
+                    <td>$55,000</td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Alice Brown</td>
+                    <td>HR</td>
+                    <td>$60,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Navigation Section - Assignment 1 Part 2 -->
+    <section id="navigation-section">
+        <h2>Site Navigation</h2>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Additional Content -->
+    <section id="content">
+        <h2>Welcome to INFO 1601</h2>
+        <p>This is your first assignment for Web Development course. Complete the styling tasks above to demonstrate your understanding of CSS.</p>
+    </section>
 </body>
 </html>

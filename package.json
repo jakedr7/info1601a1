@@ -1,20 +1,21 @@
 {
-  "name": "info1601a1",
-  "version": "1.1.0",
-  "description": "",
+  "name": "info1691a1",
+  "version": "1.0.0",
+  "description": "Student workspace for INFO 1691 Assignment 1",
   "main": "index.js",
   "scripts": {
-    "start": "npx live-server --host=0.0.0.0 --port=8080 --no-browser",
-    "test": "mocha || exit 0",
-    "update": "npm install --save testsuite1@latest"
+    "serve": "serve . -p 3000",
+    "test": "mocha test.js",
+    "dev": "npm run serve",
+    "update-testsuite": "npm install testsuite5@latest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "chai": "^4.2.0",
-    "minimist": ">=1.2.5",
-    "puppeteer": "^5.5.0",
-    "testsuite1": "^2.0.5"
-  }
+    "testsuite5": "^1.0.0",
+    "serve": "^14.2.1",
+    "http-server": "^14.1.1",
+    "chai": "^4.4.1",
+    "mocha": "^10.4.0",
+    "puppeteer": "^24.36.1"
+  },
+  "private": true
 }

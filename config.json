@@ -1,0 +1,20 @@
+{
+  "puppeteer": {
+    "headless": true,
+    "executablePath": "",
+    "slowMo": 0,
+    "devtools": false,
+    "defaultViewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage"
+    ]
+  },
+  "baseUrl": "http://localhost:8080",
+  "timeout": 30000,
+  "waitUntil": "networkidle2"
+}
