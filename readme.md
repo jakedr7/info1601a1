@@ -58,6 +58,7 @@ The test runner will show:
 - **40-59%**: Keep trying! 💪
 - **0-39%**: Review requirements and try again 📚
 
+
 ## Tips
 
 - Use Chrome DevTools to inspect elements and test styles

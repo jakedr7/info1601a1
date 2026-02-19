@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFO 1601 Assignment 1</title>
+    <style>
+        /* ===== TABLE STYLING (23 marks total) ===== */
+        
+        /* Blue background with box shadow - 10 marks */
+        table {
+            background-color: blue;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        /* Bold, centered headers - 5 marks */
+        th {
+            font-weight: bold;
+            text-align: center;
+            padding: 12px;
+            border: 1px solid white;
+            color: white;
+        }
+        
+        /* Cell borders - 8 marks */
+        td {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: left;
+            color: white;
+        }
+        
+        /* ===== NAVIGATION STYLING (18 marks total) ===== */
+        
+        /* Horizontal flexbox layout - 10 marks */
+        nav {
+            display: flex;
+            flex-direction: row;
+            background-color: #333;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        
+        /* Styled links with hover effects - 8 marks */
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            background-color: #555;
+            color: #fff;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    
+    <!-- Main Content -->
+    <main style="padding: 20px;">
+        <h1>INFO 1601 Assignment 1</h1>
+        <p>Table and Navigation Styling</p>
+        
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1, Col 1</td>
+                    <td>Row 1, Col 2</td>
+                    <td>Row 1, Col 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Col 1</td>
+                    <td>Row 2, Col 2</td>
+                    <td>Row 2, Col 3</td>
+                </tr>
+                <tr>
+                    <td>Row 3, Col 1</td>
+                    <td>Row 3, Col 2</td>
+                    <td>Row 3, Col 3</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

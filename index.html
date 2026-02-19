@@ -3,11 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INFO 1601 - Assignment 1</title>
+    <title>Sweet Delights Bakery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@800&display=swap" rel="stylesheet">
     <style>
+        /* Box sizing for all elements */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333333;
+            padding: 15px 30px;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #555555;
+            border-radius: 4px;
+        }
+
+        /* Main Container */
+        #main-container, .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #545b62;
+        }
+
+        /* Card Component - FIXED border-radius and font-weight */
+        .card {
+    background-color: #ffffff;
+    border-radius: 8px;  /* Make sure it's exactly 8px, not 8px or 8.0px */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+       .card-header {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 800 !important;  /* Add !important */
+    margin-bottom: 15px;
+}
+
+        .card-body {
+            color: #555555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Card with Image */
+        .card img {
+            max-width: 100%;
+            display: block;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        /* Flex Container */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .flex-item {
+            flex: 1 1 300px;
+            min-width: 300px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222222;
+            color: #ffffff;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Form */
+        form {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600 !important;  /* Add !important */
+    color: #333333;
+}
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #cccccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        /* Badges - FIXED font-weight */
+       .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700 !important;  /* Add !important */
+    margin-left: 5px;
+}
+
+        .badge-success {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+
+        .badge-danger {
+            background-color: #dc3545;
+            color: #ffffff;
+        }
+
+        /* Figure */
+        figure {
+            width: 30vw;
+            border: 2px solid #ddd;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        figcaption {
+            text-align: center;
+            color: #555555;
+            font-size: 14px;
+        }
+
+        /* Accordion */
+        details {
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        summary {
+            font-weight: 700;
+            cursor: pointer;
+            padding: 12px;
+            font-size: 16px;
+            list-style: none;
+        }
+
+        /* Table */
+        table {
+            border-collapse: collapse;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+            margin: 30px 0;
+        }
+
+        th {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        /* Image Responsive */
+        .img-responsive {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Dialog */
+        [popovertarget] {
+            cursor: pointer;
+        }
+
+        dialog[popover] {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border: none;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        h2 {
+            margin: 30px 0 20px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
-   <h1>INFO 1601 - Assignment 1</h1>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div>
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Menu</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+        </div>
+        <div>
+            <span class="badge badge-success">New</span>
+            <span class="badge badge-danger">Hot</span>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div id="main-container" class="container">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Sweet Delights Bakery</h1>
+            <p>Freshly baked goods made with love every day</p>
+            <div class="button-group">
+                <button class="btn-primary">Shop Now</button>
+                <button class="btn-secondary">Learn More</button>
+            </div>
+        </section>
+
+        <!-- Cards Section -->
+        <h2>Our Specialties</h2>
+        <div class="flex-container">
+            <!-- Card 1 -->
+            <div class="flex-item">
+                <div class="card">
+                    <div class="card-header">Artisan Breads</div>
+                    <div class="card-body">
+                        Freshly baked sourdough, whole wheat, and baguettes made daily with organic flour.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 with Image -->
+            <div class="flex-item">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400" alt="Fresh bread" class="img-responsive">
+                    <div class="card-header">Morning Pastries</div>
+                    <div class="card-body">
+                        Croissants, danishes, and sweet rolls baked fresh every morning.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 with Badges -->
+            <div class="flex-item">
+                <div class="card">
+                    <div class="card-header">
+                        Custom Cakes 
+                        <span class="badge badge-success">Popular</span>
+                        <span class="badge badge-danger">Order Ahead</span>
+                    </div>
+                    <div class="card-body">
+                        Birthday cakes, wedding cakes, and custom desserts made to order.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons Section -->
+        <h2>Quick Actions</h2>
+        <div class="button-group">
+            <button class="btn-primary">Primary Action</button>
+            <button class="btn-secondary">Secondary Action</button>
+        </div>
+
+        <!-- Figure Section -->
+        <h2>Featured Item</h2>
+        <figure>
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600" alt="Chocolate cake" class="img-responsive">
+            <figcaption>Triple Chocolate Layer Cake - Our signature dessert</figcaption>
+        </figure>
+
+        <!-- Table Section -->
+        <h2>Price List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Size</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Sourdough Loaf</td><td>Large</td><td>$8.50</td></tr>
+                <tr><td>Croissants</td><td>Per piece</td><td>$3.25</td></tr>
+                <tr><td>Chocolate Chip Cookies</td><td>Dozen</td><td>$12.00</td></tr>
+                <tr><td>Custom Cake</td><td>8-inch</td><td>$45.00</td></tr>
+            </tbody>
+        </table>
+
+        <!-- Accordion Section -->
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>What are your opening hours?</summary>
+            <p>Tuesday to Sunday, 7:00 AM to 6:00 PM. Closed Mondays.</p>
+        </details>
+        <details>
+            <summary>Do you take custom orders?</summary>
+            <p>Yes! Please allow 48 hours notice for custom cakes and pastries.</p>
+        </details>
+        <details>
+            <summary>Are your products fresh daily?</summary>
+            <p>Everything is baked fresh each morning. No day-old items are ever sold.</p>
+        </details>
+
+        <!-- Form Section -->
+        <h2>Contact Us</h2>
+        <form>
+            <label class="form-label" for="name">Full Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name">
+            
+            <label class="form-label" for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com">
+            
+            <label class="form-label" for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" class="form-input" placeholder="(555) 123-4567">
+            
+            <div class="button-group">
+                <button type="submit" class="btn-primary">Send Message</button>
+                <button type="reset" class="btn-secondary">Clear Form</button>
+            </div>
+        </form>
+
+        <!-- Dialog Section -->
+        <h2>Special Offers</h2>
+        <button popovertarget="offer-dialog" class="btn-primary">View Weekly Special</button>
+        
+        <dialog popover id="offer-dialog">
+            <h3 style="margin-bottom: 15px;">🎉 This Week's Special</h3>
+            <p style="margin-bottom: 20px;">Buy any two loaves of bread and get a free croissant! Offer valid through Sunday.</p>
+            <button popovertarget="offer-dialog" popovertargetaction="hide" class="btn-secondary">Close</button>
+        </dialog>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Sweet Delights Bakery. All rights reserved.</p>
+        <p style="font-size: 14px; margin-top: 10px;">123 Main Street • (555) 123-4567</p>
+    </footer>
 </body>
 </html>

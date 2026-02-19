@@ -12,9 +12,11 @@
   "dependencies": {
     "chai": "^4.4.1",
     "mocha": "^10.4.0",
-    "puppeteer": "^24.36.1",
-    "serve": "^14.2.1",
-    "testsuite4": "^1.1.0"
+    "puppeteer": "^24.37.4",
+    "serve": "^6.5.8"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "testsuite4": "^1.0.1"
+  }
 }

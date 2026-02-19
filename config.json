@@ -1,3 +1,4 @@
+@'
 {
   "puppeteer": {
     "headless": true,
@@ -7,8 +8,9 @@
     "defaultViewport": { "width": 1400, "height": 1080 },
     "args": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
   },
-  "baseUrl": "http://localhost:3000/assignment1",
-  "port": 3000,
+  "baseUrl": "http://127.0.0.1:5500/index.html",
+  "port": 5500,
   "timeout": 30000,
   "waitUntil": "load"
 }
+'@ | Out-File -FilePath config.json -Encoding UTF8

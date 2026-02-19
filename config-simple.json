@@ -1,0 +1,8 @@
+{
+  "testDir": "tests",
+  "baseUrl": "http://localhost:3000/assignment1",
+  "tests": [
+    "table-styling",
+    "navigation-styling"
+  ]
+}
